@@ -1,0 +1,10 @@
+1. Write a menu driven program that performs all the bitwise operations
+2. Write a program that performs the arithmetic addition operation using binary operators
+3. Write a program that multiply the entered number by 4 using bitwise operation
+4. Write a program that checks if a particular bit is set to one or not. [String approach]
+5. Write a program that changes the particular from 0 to 1 and vice versa. [String approach]
+6. Write a program that checks if a particular bit is set to one change it to zero and vice versa using bitwise operators.
+7. Write a program that checks if a particular bit is set to one or not using bitwise operations.
+8. Write a program that converts the decimal number to binary number and count the number of 1s in the binary of the entered number
+9. Write a program that Swaps the two numbers using bit wise operations
+10. Write a program that count the 1 bits of entered decimal number using bitwise operations
