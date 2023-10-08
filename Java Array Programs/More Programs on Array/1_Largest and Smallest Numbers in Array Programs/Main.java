@@ -149,39 +149,39 @@ import java.util.Stack;
 /* 6. Write a program that finds the next greater element in the array */
 /* Create a stack and push the first element of the array onto it. Now for each of the remaining elements, check whether the stack is empty or not. If the stack is not empty, pop an element from the stack, if the element is smaller than the current array element, then print the current element as the next greater element for popped element. Continue the process, either until the stack is empty or the popped element is greater than the current array element. Finally, push the current array element onto the stack. At last, after iterating over the array, pop all the elements of the stack and print -1 as the next greater element for them. */
 
-class NextGreaterElement{
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter the size of the array : ");
-        int n = input.nextInt();
+// class NextGreaterElement{
+//     public static void main(String[] args){
+//         Scanner input = new Scanner(System.in);
+//         System.out.print("Enter the size of the array : ");
+//         int n = input.nextInt();
 
-        int array[] = new int[n];
-        System.out.print("Enter the " + n + " values  : \n");
-        for(int i = 0; i < array.length; i++){
-            System.out.print("["+(i+1)+"] : ");
-            array[i] = input.nextInt();
-        }
+//         int array[] = new int[n];
+//         System.out.print("Enter the " + n + " values  : \n");
+//         for(int i = 0; i < array.length; i++){
+//             System.out.print("["+(i+1)+"] : ");
+//             array[i] = input.nextInt();
+//         }
 
-        NextGreaterElement.printNextGreaterElement(array);
-    }
+//         NextGreaterElement.printNextGreaterElement(array);
+//     }
 
-    public static void printNextGreaterElement(int[] array){
-        Stack<Integer> stack = new Stack<>();
-        stack.push(array[0]);
-        for(int i = 0; i < array.length; i++){
-            if(stack.empty()){
-                stack.push(array[i]);
-                continue;
-            }
-            while(!stack.empty() && stack.peek() < array[i]){
-                    int x = stack.peek();
-                    System.out.println(x + "-->" + array[i]);
-                    stack.pop();
-                }
-            stack.push(array[i]);
-        }
-        while(!stack.empty()){
-            System.out.print(stack.pop() + "--> -1");
-        }
-    }
-}
+//     public static void printNextGreaterElement(int[] array){
+//         Stack<Integer> stack = new Stack<>();
+//         stack.push(array[0]);
+//         for(int i = 0; i < array.length; i++){
+//             if(stack.empty()){
+//                 stack.push(array[i]);
+//                 continue;
+//             }
+//             while(!stack.empty() && stack.peek() < array[i]){
+//                     int x = stack.peek();
+//                     System.out.println(x + "-->" + array[i]);
+//                     stack.pop();
+//                 }
+//             stack.push(array[i]);
+//         }
+//         while(!stack.empty()){
+//             System.out.print(stack.pop() + "--> -1");
+//         }
+//     }
+// }
