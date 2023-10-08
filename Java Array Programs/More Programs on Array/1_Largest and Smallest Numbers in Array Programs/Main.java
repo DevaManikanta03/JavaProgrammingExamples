@@ -1,6 +1,6 @@
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.Stack;
+// import java.util.Scanner;
+// import java.util.Arrays;
+// import java.util.Stack;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 1. Write a program that finds the number of elements in a array in Java */
 // class NumberOfElements{
