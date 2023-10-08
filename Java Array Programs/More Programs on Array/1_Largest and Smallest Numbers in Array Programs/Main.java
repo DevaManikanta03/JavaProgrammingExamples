@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Stack;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 1. Write a program that finds the number of elements in a array in Java */
 // class NumberOfElements{
@@ -161,6 +162,26 @@ class NextGreaterElement{
             array[i] = input.nextInt();
         }
 
-        
+        NextGreaterElement.printNextGreaterElement(array);
+    }
+
+    public static void printNextGreaterElement(int[] array){
+        Stack<Integer> stack = new Stack<>();
+        stack.push(array[0]);
+        for(int i = 0; i < array.length; i++){
+            if(stack.empty()){
+                stack.push(array[i]);
+                continue;
+            }
+            while(!stack.empty() && stack.peek() < array[i]){
+                    int x = stack.peek();
+                    System.out.println(x + "-->" + array[i]);
+                    stack.pop();
+                }
+            stack.push(array[i]);
+        }
+        while(!stack.empty()){
+            System.out.print(stack.pop() + "--> -1");
+        }
     }
 }
