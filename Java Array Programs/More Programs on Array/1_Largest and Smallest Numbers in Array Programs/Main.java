@@ -1,6 +1,6 @@
-// import java.util.Scanner;
-// import java.util.Arrays;
-// import java.util.Stack;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Stack;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 1. Write a program that finds the number of elements in a array in Java */
 // class NumberOfElements{
@@ -147,4 +147,35 @@
 // }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* 6. Write a program that finds the next greater element in the array */
-/* Create a stack and push the first element of the array onto it. Now for each of the remaining elements, check whether the stack is empty or not. If the stack is not empty, pop an element from the stack, if the element is smaller than the current array element, then print the current element as the next greater element for popped element. Continue the process, either until the stack is empty or the popped element is greater than the current array element. Finally, push the current array element onto the stack. At last, after iterating over the array, pop all the elements of the stack and print -1 as the next greater element for them. */
+class PrintNextGreaterNumber{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int n = input.nextInt();
+        
+        System.out.println("Enter the "+n+" elements into the array: ");
+        int myArray[] = new int[n];
+
+        for(int i = 0; i < myArray.length; i++){
+            System.out.print("["+(i+1)+"] : ");
+            myArray[i] = input.nextInt();
+        }
+        Stack<Integer> container = new Stack<>();       
+        container.push(myArray[0]);
+        for(int i = 0; i < myArray.length; i++){
+            if(container.empty()){
+                container.push(myArray[i]);
+                continue;
+            }
+            while(!container.empty() && container.peek() < myArray[i]){
+                System.out.println(container.peek() + " --> " + myArray[i]);
+                container.pop();
+            }
+            container.push(myArray[i]);
+        }
+
+        while(!container.empty()){
+            System.out.println(container.pop() + " --> " + "-1");
+        }
+    }
+}
