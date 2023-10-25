@@ -177,5 +177,6 @@ class PrintNextGreaterNumber{
         while(!container.empty()){
             System.out.println(container.pop() + " --> " + "-1");
         }
+        input.close();
     }
 }
